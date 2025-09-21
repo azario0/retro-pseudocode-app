@@ -1,0 +1,37 @@
+<!-- templates/index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retro Pseudocode Generator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Pseudo-Gen 3000</h1>
+            <p>Your Nostalgic Python-to-Pseudocode Converter</p>
+        </header>
+
+        <main>
+            <form action="/" method="post">
+                <div class="form-group">
+                    <label for="code_input">--[ Python Code ]--</label>
+                    <textarea name="code_input" id="code_input" rows="10" placeholder="Paste your Python code here...">{{ python_code or '' }}</textarea>
+                </div>
+                <button type="submit">GENERATE</button>
+            </form>
+
+            {% if pseudocode %}
+            <div class="result-box">
+                <label for="pseudocode_output">--[ Generated Pseudocode ]--</label>
+                <pre id="pseudocode_output">{{ pseudocode }}</pre>
+            </div>
+            {% endif %}
+
+        </main>
+    </div>
+</body>
+</html>

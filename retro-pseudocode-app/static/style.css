@@ -1,0 +1,123 @@
+/* static/style.css */
+
+@import url('https://fonts.googleapis.com/css2?family=VT323&family=Press+Start+2P&display=swap');
+
+body {
+    background-color: #0d0221;
+    color: #00ff41; /* Bright green text */
+    font-family: 'VT323', monospace;
+    font-size: 20px;
+    margin: 0;
+    padding: 2em;
+    text-shadow: 0 0 5px #00ff41;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    border: 3px solid #f923d2; /* Hot pink border */
+    box-shadow: 0 0 20px #f923d2;
+    padding: 2em;
+    background-color: #261447;
+    border-radius: 8px;
+}
+
+header {
+    text-align: center;
+    border-bottom: 2px dashed #00ff41;
+    padding-bottom: 1em;
+    margin-bottom: 2em;
+}
+
+header h1 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 2.5em;
+    color: #f923d2;
+    text-shadow: 3px 3px 0px #24d0c9;
+    margin: 0;
+    animation: flicker 1.5s infinite alternate;
+}
+
+@keyframes flicker {
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+    text-shadow:
+      0 0 4px #fff,
+      0 0 11px #fff,
+      0 0 19px #fff,
+      0 0 40px #f923d2,
+      0 0 80px #f923d2,
+      0 0 90px #f923d2,
+      0 0 100px #f923d2,
+      0 0 150px #f923d2;
+  }
+  20%, 24%, 55% {       
+    text-shadow: none;
+  }
+}
+
+header p {
+    color: #24d0c9; /* Cyan */
+    font-size: 1.2em;
+    margin-top: 0.5em;
+}
+
+.form-group {
+    margin-bottom: 2em;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5em;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+textarea, pre {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 2px solid #00ff41;
+    color: #00ff41;
+    font-family: 'VT323', monospace;
+    font-size: 1.1em;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+textarea:focus, button:focus {
+    outline: none;
+    box-shadow: 0 0 15px #00ff41;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: #f923d2;
+    color: #0d0221;
+    border: none;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1.2em;
+    cursor: pointer;
+    text-transform: uppercase;
+    border-radius: 4px;
+    transition: all 0.2s ease-in-out;
+}
+
+button:hover {
+    background-color: #00ff41;
+    color: #0d0221;
+    box-shadow: 0 0 20px #f923d2, inset 0 0 10px #000;
+}
+
+.result-box {
+    margin-top: 2em;
+}
+
+pre {
+    min-height: 150px;
+    white-space: pre-wrap; /* Ensures text wraps */
+    word-wrap: break-word;
+    border-color: #24d0c9;
+}
