@@ -158,6 +158,9 @@ This might occur if:
 - The API quota is exceeded
 - There are network issues
 
+## Tutorial 
+https://softwarejournal.blog/blog/retro-pseudocode-generator-flask-gemini-explained/
+
 ## 📝 License
 
 See the [LICENSE](LICENSE) file for details.
